@@ -1,7 +1,8 @@
 // TODO: Can only set a position if it is an empty string
-import { Letters } from './letter.enum';
+import { Letters } from './letter.enum.ts';
+import { BoardPosition } from './board-position.enum.ts';
 
-class Board {
+export class Board {
   private _A1: Letters;
   private _A2: Letters;
   private _A3: Letters;
@@ -134,7 +135,7 @@ class Board {
   }
 
   get C1(): Letters {
-    return this._B1;
+    return this._C1;
   }
 
   set C1(letter: Letters) {   
