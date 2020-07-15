@@ -1,10 +1,15 @@
 import { Player } from './player';
+import { Board } from './board.ts';
 
 class TicTacToe {
   private _playerOne: Player;
   private _playerTwo: Player;
-  private board; // TODO: Type
-  private firstLetter;
+  private goesFirst: Player;
+  private board: Board;
+
+  constructor() {
+
+  }
 
   get playerOne(): Player {
     return this._playerOne;

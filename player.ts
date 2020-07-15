@@ -1,8 +1,8 @@
 export class Player {
-  readonly name;
-  readonly letter;
+  readonly name: string;
+  readonly letter: string;
 
-  constructor(name, letter) {
+  constructor(name: string, letter: string) {
     this.name = name;
     this.letter = letter;
   }

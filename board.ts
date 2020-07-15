@@ -1,44 +1,42 @@
 // TODO: Can only set a position if it is an empty string
-import { Letters } from './letter.enum.ts';
+import { Letter } from './letter.enum.ts';
 import { BoardPosition } from './board-position.enum.ts';
 
 export class Board {
-  private _A1: Letters;
-  private _A2: Letters;
-  private _A3: Letters;
-  private _B1: Letters;
-  private _B2: Letters;
-  private _B3: Letters;
-  private _C1: Letters;
-  private _C2: Letters;
-  private _C3: Letters;
+  private _A1: Letter;
+  private _A2: Letter;
+  private _A3: Letter;
+  private _B1: Letter;
+  private _B2: Letter;
+  private _B3: Letter;
+  private _C1: Letter;
+  private _C2: Letter;
+  private _C3: Letter;
 
   constructor() {
-    this._A1 = Letters.Empty;
-    this._A2 = Letters.Empty;
-    this._A3 = Letters.Empty;
-    this._B1 = Letters.Empty;
-    this._B2 = Letters.Empty;
-    this._B3 = Letters.Empty;
-    this._C1 = Letters.Empty;
-    this._C2 = Letters.Empty;
-    this._C3 = Letters.Empty;
+    this._A1 = Letter.Empty;
+    this._A2 = Letter.Empty;
+    this._A3 = Letter.Empty;
+    this._B1 = Letter.Empty;
+    this._B2 = Letter.Empty;
+    this._B3 = Letter.Empty;
+    this._C1 = Letter.Empty;
+    this._C2 = Letter.Empty;
+    this._C3 = Letter.Empty;
   }
 
-  // TODO: Finish display board function
   displayBoard(): string {
-    const board = `
-      ${this._A1} | ${this._A2} | ${this._A3}
-      ------------------------------------
-            |       |       
-      ----------------------
-            |       |       
-    `;
-
+    const board = 
+      `  ${this._A1}  |  ${this._A2}  |  ${this._A3}\n` +
+      '-----------------\n' +
+      `  ${this._B1}  |  ${this._B2}  |  ${this._B3}\n` +
+      '-----------------\n' +
+      `  ${this._C1}  |  ${this._C2}  |  ${this._C3}`; 
+    
     return board;
   }
 
-  setPostion(position: BoardPosition, letter: Letters): void {
+  setPostion(position: BoardPosition, letter: Letter): void {
     // TODO: Maybe do position check here, if position is already a letter
     switch (position) {
       case 'A1':
@@ -86,75 +84,75 @@ export class Board {
    * Getters/Setters For Board Positions 
    */
 
-  get A1(): Letters {
+  get A1(): Letter {
     return this._A1;
   }
 
-  set A1(letter: Letters) {   
+  set A1(letter: Letter) {   
     this._A1 = letter;
   }
 
-  get A2(): Letters {
+  get A2(): Letter {
     return this._A2;
   }
 
-  set A2(letter: Letters) {   
+  set A2(letter: Letter) {   
     this._A2 = letter;
   }
 
-  get A3(): Letters {
+  get A3(): Letter {
     return this._A3;
   }
 
-  set A3(letter: Letters) {   
+  set A3(letter: Letter) {   
     this._A3 = letter;
   }
 
-  get B1(): Letters {
+  get B1(): Letter {
     return this._B1;
   }
 
-  set B1(letter: Letters) {   
+  set B1(letter: Letter) {   
     this._B1 = letter;
   }
 
-  get B2(): Letters {
+  get B2(): Letter {
     return this._B2;
   }
 
-  set B2(letter: Letters) {   
+  set B2(letter: Letter) {   
     this._B2 = letter;
   }
 
-  get B3(): Letters {
+  get B3(): Letter {
     return this._B3;
   }
 
-  set B3(letter: Letters) {   
+  set B3(letter: Letter) {   
     this._B3 = letter;
   }
 
-  get C1(): Letters {
+  get C1(): Letter {
     return this._C1;
   }
 
-  set C1(letter: Letters) {   
+  set C1(letter: Letter) {   
     this._C1 = letter;
   }
 
-  get C2(): Letters {
+  get C2(): Letter {
     return this._C2;
   }
 
-  set C2(letter: Letters) {   
+  set C2(letter: Letter) {   
     this._C2 = letter;
   }
 
-  get C3(): Letters {
+  get C3(): Letter {
     return this._C3;
   }
 
-  set C3(letter: Letters) {   
+  set C3(letter: Letter) {   
     this._C3 = letter;
   } 
 }
