@@ -36,6 +36,67 @@ export class Board {
     return board;
   }
 
+  letterIsWinner(letter: Letter): boolean {
+    // Check A Column
+    if (
+      this._A1 === letter &&
+      this._A2 === letter &&
+      this._A3 === letter 
+    ) return true;
+
+    // Check B Column
+    if (
+      this._B1 === letter &&
+      this._B2 === letter &&
+      this._B3 === letter 
+    ) return true;
+
+    // Check C Column
+    if (
+      this._C1 === letter &&
+      this._C2 === letter &&
+      this._C3 === letter 
+    ) return true;
+
+    // Check 1 Row
+    if (
+      this._A1 === letter &&
+      this._B1 === letter &&
+      this._C1 === letter 
+    ) return true;
+
+    // Check 2 Row
+    if (
+      this._A2 === letter &&
+      this._B2 === letter &&
+      this._C2 === letter 
+    ) return true;
+    
+    // Check 3 Row
+    if (
+      this._A3 === letter &&
+      this._B3 === letter &&
+      this._C3 === letter 
+    ) return true;
+
+    // Check top left to bot right
+    if (
+      this._A1 === letter &&
+      this._B2 === letter &&
+      this._C3 === letter 
+    ) return true;
+
+    // Check top right to bottom left
+    if (
+      this._A3 === letter &&
+      this._B2 === letter &&
+      this._C1 === letter 
+    ) return true;
+
+    return false;
+  }
+
+
   setPostion(position: BoardPosition, letter: Letter): void {
     // TODO: Maybe do position check here, if position is already a letter
     switch (position) {

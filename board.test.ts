@@ -21,24 +21,12 @@ Deno.test("Board has method that shows current state of gameboard", () => {
   );
 });
 
-// Deno.test("Test Assert Not Equals", () => {
-//   assertNotEquals(1, 2);
-//   assertNotEquals("Hello", "World");
-//   assertNotEquals(true, false);
-//   assertNotEquals(undefined, "");
-//   assertNotEquals(new Date(), Date.now());
-//   assertNotEquals(new RegExp("abc"), new RegExp("def"));
-// });
+Deno.test("Board has method that checks for a winner", () => {
+  // Arrange
+  // Act
+  // Assert
+  assertEquals(
+    true, false
+  );
+});
 
-// Deno.test("example", function (): void {
-//   assertEquals("world", "world");
-//   assertEquals({ hello: "world" }, { hello: "world" });
-// });
-
-// Deno.test({
-//   name: "testing example",
-//   fn(): void {
-//     assertEquals("world", "world");
-//     assertEquals({ hello: "world" }, { hello: "world" });
-//   },
-// });
